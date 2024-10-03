@@ -1,2 +1,2 @@
-# Expressions
+# MyExpressions
 A small mathematical expression interpreter
