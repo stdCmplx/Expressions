@@ -16,6 +16,12 @@ EConstant >> evaluate [
 
 ]
 
+{ #category : 'arithmetic' }
+EConstant >> negated [
+	^ ENegation new expression: self
+
+]
+
 { #category : 'accessing' }
 EConstant >> value: anInteger [
 	"set the value of the instance variable value."
