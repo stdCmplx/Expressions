@@ -9,6 +9,13 @@ Class {
 	#package : 'MyExpressions'
 }
 
+{ #category : 'instance creation' }
+EAddition class >> left: anInteger right: anInteger2 [
+	
+	^ self new left: anInteger ; right: anInteger2
+
+]
+
 { #category : 'accessing' }
 EAddition >> evaluate [
 	"The evaluate method for addition."

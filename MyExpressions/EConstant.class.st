@@ -8,6 +8,13 @@ Class {
 	#package : 'MyExpressions'
 }
 
+{ #category : 'accessing' }
+EConstant class >> value: anInteger [
+	
+	^ self new value: anInteger
+
+]
+
 { #category : 'public access' }
 EConstant >> evaluate [
 

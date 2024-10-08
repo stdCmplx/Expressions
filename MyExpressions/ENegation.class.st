@@ -8,6 +8,13 @@ Class {
 	#package : 'MyExpressions'
 }
 
+{ #category : 'instance creation' }
+ENegation class >> expression: anExpression [
+	
+	^ self new expression: anExpression
+
+]
+
 { #category : 'accessing' }
 ENegation >> evaluate [
 	"The evaluate method should request the evaluation of the
