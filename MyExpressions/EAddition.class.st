@@ -27,6 +27,13 @@ EAddition >> left: anExpression [
 ]
 
 { #category : 'accessing' }
+EAddition >> negated [
+	
+	^ ENegation new expression: self
+
+]
+
+{ #category : 'accessing' }
 EAddition >> right: anExpression [
 	"Set an expression at the right subexpression."
 	
