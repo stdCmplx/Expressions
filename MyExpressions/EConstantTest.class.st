@@ -24,3 +24,10 @@ EConstantTest >> testNegated [
 	self assert: (EConstant new value: 6) negated evaluate equals: -6
 
 ]
+
+{ #category : 'tests' }
+EConstantTest >> testPrinting [
+	
+	self assert: EConstant constant5 printString equals: '5'
+
+]

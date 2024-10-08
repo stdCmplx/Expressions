@@ -31,3 +31,14 @@ ENegation >> expression: anExpression [
 	expression := anExpression
 
 ]
+
+{ #category : 'accessing' }
+ENegation >> printOn: aStream [
+
+	aStream
+		"nextPutAll: '- ';
+		 nextPutAll: expression printString"
+		nextPutAll: '- '.
+		expression printOn: aStream
+
+]

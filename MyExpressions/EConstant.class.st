@@ -36,6 +36,13 @@ EConstant >> evaluate [
 ]
 
 { #category : 'accessing' }
+EConstant >> printOn: aStream [
+
+	aStream nextPutAll: value printString
+
+]
+
+{ #category : 'accessing' }
 EConstant >> value: arg1 [
 
 	value := arg1

@@ -43,6 +43,21 @@ EMultiplication >> left: anExpression [
 ]
 
 { #category : 'accessing' }
+EMultiplication >> printOn: aStream [
+	"Printing a multiplication is: put an open parenthesis, print the
+	 left expression, put ’ * ’, print the right expression and
+	 put a closing parenthese in the stream."
+	
+	aStream
+		nextPutAll: '( ';
+		nextPutAll: left printString;
+		nextPutAll: ' * ';
+		nextPutAll: right printString;
+		nextPutAll: ' )'
+
+]
+
+{ #category : 'accessing' }
 EMultiplication >> right: anExpression [
 	"Set an expression at the right subexpression."
 
