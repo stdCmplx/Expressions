@@ -1,6 +1,6 @@
 Class {
 	#name : 'EMultiplication',
-	#superclass : 'Object',
+	#superclass : 'EExpression',
 	#instVars : [
 		'left',
 		'right'
@@ -22,13 +22,6 @@ EMultiplication >> left: anExpression [
 	"Set an expression at the left subexpression."
 
 	left := anExpression
-
-]
-
-{ #category : 'accessing' }
-EMultiplication >> negated [
-
-	^ ENegation new expression: self
 
 ]
 

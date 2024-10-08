@@ -1,6 +1,6 @@
 Class {
 	#name : 'ENegation',
-	#superclass : 'Object',
+	#superclass : 'EExpression',
 	#instVars : [
 		'expression'
 	],
@@ -22,11 +22,5 @@ ENegation >> expression: anExpression [
 	"A setter method to be able to set the expression under negation."
 
 	expression := anExpression
-
-]
-
-{ #category : 'arithmetic' }
-ENegation >> negated [
-	^ ENegation new expression: self
 
 ]

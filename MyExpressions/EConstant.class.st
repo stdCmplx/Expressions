@@ -1,6 +1,6 @@
 Class {
 	#name : 'EConstant',
-	#superclass : 'Object',
+	#superclass : 'EExpression',
 	#instVars : [
 		'value'
 	],
@@ -10,21 +10,12 @@ Class {
 
 { #category : 'public access' }
 EConstant >> evaluate [
-	"the method evaluate return the value of the constant."
-	
+
 	^ value
-
-]
-
-{ #category : 'arithmetic' }
-EConstant >> negated [
-	^ ENegation new expression: self
-
 ]
 
 { #category : 'accessing' }
-EConstant >> value: anInteger [
-	"set the value of the instance variable value."
-	
-	value := anInteger
+EConstant >> value: arg1 [
+
+	value := arg1
 ]

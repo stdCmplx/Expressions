@@ -1,6 +1,6 @@
 Class {
 	#name : 'EAddition',
-	#superclass : 'Object',
+	#superclass : 'EExpression',
 	#instVars : [
 		'left',
 		'right'
@@ -23,13 +23,6 @@ EAddition >> left: anExpression [
 	"Set an expression at the left subexpression."
 	
 	left := anExpression
-
-]
-
-{ #category : 'accessing' }
-EAddition >> negated [
-	
-	^ ENegation new expression: self
 
 ]
 
