@@ -33,6 +33,13 @@ ENegation >> expression: anExpression [
 ]
 
 { #category : 'accessing' }
+ENegation >> negated [
+	
+	^ expression
+
+]
+
+{ #category : 'accessing' }
 ENegation >> printOn: aStream [
 
 	aStream
