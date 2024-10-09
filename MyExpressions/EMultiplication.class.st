@@ -1,10 +1,6 @@
 Class {
 	#name : 'EMultiplication',
-	#superclass : 'EExpression',
-	#instVars : [
-		'left',
-		'right'
-	],
+	#superclass : 'EBinaryExpression',
 	#category : 'MyExpressions',
 	#package : 'MyExpressions'
 }
@@ -35,10 +31,9 @@ EMultiplication >> evaluate [
 ]
 
 { #category : 'accessing' }
-EMultiplication >> left: anExpression [
-	"Set an expression at the left subexpression."
+EMultiplication >> operatorString [
 
-	left := anExpression
+	^ ' * '
 
 ]
 
@@ -54,13 +49,5 @@ EMultiplication >> printOn: aStream [
 		nextPutAll: ' * ';
 		nextPutAll: right printString;
 		nextPutAll: ' )'
-
-]
-
-{ #category : 'accessing' }
-EMultiplication >> right: anExpression [
-	"Set an expression at the right subexpression."
-
-	right := anExpression
 
 ]

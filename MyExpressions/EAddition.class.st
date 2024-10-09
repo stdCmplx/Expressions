@@ -1,10 +1,6 @@
 Class {
 	#name : 'EAddition',
-	#superclass : 'EExpression',
-	#instVars : [
-		'left',
-		'right'
-	],
+	#superclass : 'EBinaryExpression',
 	#category : 'MyExpressions',
 	#package : 'MyExpressions'
 }
@@ -32,36 +28,5 @@ EAddition >> evaluate [
 	
 	^ (left evaluate) + (right evaluate)
 
-
-]
-
-{ #category : 'accessing' }
-EAddition >> left: anExpression [
-	"Set an expression at the left subexpression."
-	
-	left := anExpression
-
-]
-
-{ #category : 'accessing' }
-EAddition >> printOn: aStream [
-	"Printing an addition is: put an open parenthesis, print the
-	 left expression, put ’ + ’, print the right expression and
-	 put a closing parenthese in the stream."
-
-	aStream
-		nextPutAll: '( ';
-		nextPutAll: left printString;
-		nextPutAll: ' + ';
-		nextPutAll: right printString;
-		nextPutAll: ' )'
-
-]
-
-{ #category : 'accessing' }
-EAddition >> right: anExpression [
-	"Set an expression at the right subexpression."
-	
-	right := anExpression
 
 ]
