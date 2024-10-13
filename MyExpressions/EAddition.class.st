@@ -30,3 +30,10 @@ EAddition >> evaluate [
 
 
 ]
+
+{ #category : 'accessing' }
+EAddition >> operatorString [
+
+	^ ' + '
+
+]
