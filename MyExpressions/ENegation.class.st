@@ -16,11 +16,9 @@ ENegation class >> expression: anExpression [
 ]
 
 { #category : 'accessing' }
-ENegation >> evaluate [
-	"The evaluate method should request the evaluation of the
-	 expression and negate it."
+ENegation >> evaluateWith: anObject [
 
-	^ (expression evaluate) negated
+	^ (expression evaluateWith: anObject) negated
 
 ]
 

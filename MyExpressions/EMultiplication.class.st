@@ -23,10 +23,9 @@ EMultiplication class >> left: anExp1 right: anExp2 [
 ]
 
 { #category : 'accessing' }
-EMultiplication >> evaluate [
-	"The evaluate method for multiplication."
-
-	^ (left evaluate) * (right evaluate)
+EMultiplication >> evaluateWith: anObject [
+	
+	^ (left evaluateWith: anObject) * (right evaluateWith: anObject)
 
 ]
 
@@ -34,20 +33,5 @@ EMultiplication >> evaluate [
 EMultiplication >> operatorString [
 
 	^ ' * '
-
-]
-
-{ #category : 'accessing' }
-EMultiplication >> printOn: aStream [
-	"Printing a multiplication is: put an open parenthesis, print the
-	 left expression, put ’ * ’, print the right expression and
-	 put a closing parenthese in the stream."
-	
-	aStream
-		nextPutAll: '( ';
-		nextPutAll: left printString;
-		nextPutAll: ' * ';
-		nextPutAll: right printString;
-		nextPutAll: ' )'
 
 ]

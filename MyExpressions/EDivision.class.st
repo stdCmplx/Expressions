@@ -24,9 +24,9 @@ EDivision class >> left: anExp1 right: anExp2 [
 ]
 
 { #category : 'public access' }
-EDivision >> evaluate [
+EDivision >> evaluateWith: anObject [
 
-	^ (left evaluate) / (right evaluate)
+	^ (left evaluateWith: anObject) / (right evaluateWith: anObject)
 
 ]
 
@@ -34,20 +34,5 @@ EDivision >> evaluate [
 EDivision >> operatorString [
 
 	^ ' / '
-
-]
-
-{ #category : 'accessing' }
-EDivision >> printOn: aStream [
-	"Printing a division is: put an open parenthesis, print the
-	 left expression, put ’ / ’, print the right expression and
-	 put a closing parenthese in the stream."
-	
-	aStream
-		nextPutAll: '( ';
-		nextPutAll: left printString;
-		nextPutAll: self operatorString;
-		nextPutAll: right printString;
-		nextPutAll: ' )'
 
 ]

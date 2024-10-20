@@ -23,9 +23,9 @@ EPower class >> left: anExp1 right: anExp2 [
 ]
 
 { #category : 'public access' }
-EPower >> evaluate [
+EPower >> evaluateWith: anObject [
 
-	^ (left evaluate) ** (right evaluate)
+	^ (left evaluateWith: anObject) ** (right evaluateWith: anObject)
 
 ]
 
@@ -33,20 +33,5 @@ EPower >> evaluate [
 EPower >> operatorString [
 
 	^ ' ^ '
-
-]
-
-{ #category : 'public access' }
-EPower >> printOn: aStream [
-	"Printing a raising to power is: put an open parenthesis, print the
-	 left expression, put ’ ^ ’, print the right expression and
-	 put a closing parenthese in the stream."
-	
-	aStream
-		nextPutAll: '( ';
-		nextPutAll: left printString;
-		nextPutAll: self operatorString;
-		nextPutAll: right printString;
-		nextPutAll: ' )'
 
 ]

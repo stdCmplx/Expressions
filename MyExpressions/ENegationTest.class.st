@@ -8,16 +8,20 @@ Class {
 { #category : 'tests' }
 ENegationTest >> testEvaluate [
 	
-	self assert: (ENegation new expression: (EConstant new value: 5))
-		evaluate equals: -5
+	| ep neg |
+	ep := EVariable new id: #x.
+	neg := ENegation new expression: ep.
+	self assert: (neg evaluateWith: { #x -> EConstant new value: 5 } asDictionary) equals: -5
 
 ]
 
 { #category : 'tests' }
 ENegationTest >> testEvaluateWithClassCreationMessage [
 	
-	self assert: (ENegation expression: (EConstant value: 5)) evaluate
-		equals: -5
+	| ep neg |
+	ep := EVariable new id: #x.
+	neg := ENegation expression: ep.
+	self assert: (neg evaluateWith: { #x -> EConstant new value: 5 } asDictionary) equals: -5
 
 ]
 
@@ -33,8 +37,11 @@ ENegationTest >> testNegatedStructureIsCorrect [
 
 { #category : 'tests' }
 ENegationTest >> testNegationNegated [
-	
-	self assert: (EConstant new value: 6) negated negated evaluate
-		equals: 6
+
+	| ep neg |
+	ep := EVariable new id: #x.
+	neg := ENegation new expression: ep.
+	self assert: (neg evaluateWith: { #x -> EConstant new value: 6 } asDictionary)
+		negated equals: 6
 
 ]
